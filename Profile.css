@@ -1,0 +1,188 @@
+/* Aseguramos que html y body ocupen toda la altura de la ventana */
+html, body {
+    padding: 50px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    background-image: url(fondo.png);
+}
+
+/* Cabecera */
+header {
+    background-color: #861078;
+}
+
+#avatar {
+    display: flex;
+    justify-content: right;
+    width: 60px;
+    height: auto;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+#welcomeguess {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clicks {
+    color: #e0e0e0;
+}
+
+.welcome {
+    background-color: #861078;
+    padding: 20px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#textwelcome, #textguess {
+    color: white;
+    margin: 0;
+}
+
+.div_avatar {
+    display: flex;
+    justify-content: right;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: #861078;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0e0e0; /* Color inicial */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+    color: green; /* Color al pasar el cursor */
+}
+
+#div_datos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+
+.settings-container{
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+.information_settings{
+    flex-direction: column;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.containers-settings{
+    display: flex;
+    justify-content: space-around;
+    background-color: #C4C4C433;
+}
+
+.front_profile{
+
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title_settings{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#settings-text{
+    color: #861078;
+}
+
+hr{
+    border: 0;
+    border-top: 3px solid black; /* Color de la línea */
+    margin: 2px 0; /* Espacio alrededor de la línea */
+}
+
+.avatar_profile{
+    width: 150px;
+    height: auto;
+}
+
+.input_information{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 40px;
+}
+
+.delete{
+    border-color: red;
+    width: 10px;
+    height: auto;
+    border: red;
+    color: red;
+}
+
+footer{
+    width: 100%;
+    background-color: #861078;
+    padding: 0;
+}
+
+.text_footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.terms{
+    color: #ffffff;
+}

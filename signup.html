@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagicBook - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" href="logo.ico">
+</head>
+<body>
+    <div class="signup-page">
+        <!-- Sección Izquierda (Formulario de Registro) -->
+        <div class="signup-left">
+            <a href="index.html">
+                <img src="logooo.png" alt="Magic Book Logo">
+            </a>
+            <h2>Create your free account</h2>
+            <p class="description">
+                To make notes, add favorites, view history, and access other services, you must create a free account as a reader.
+            </p>
+            <form id="signup-form" action="signup.php" method="POST">
+                <!-- Campo para nombre de usuario -->
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="username" placeholder="User name" required>
+
+                <!-- Nuevo campo para el nombre a mostrar -->
+                <label for="display-name">Display Name</label>
+                <input type="text" id="display-name" name="display_name" placeholder="Display name (How would you like to be called?)" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password')">
+                        <img src="ojo 2.png" alt="Toggle Password Visibility">
+                    </button>
+                </div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">
+                        <img src="ojo 2.png" alt="Toggle Password Visibility">
+                    </button>
+                </div>
+
+                <button type="submit" class="button">Sign up</button>
+            </form>
+            <p class="signup-text">
+                You already have an account? <a href="login.html">Log in</a>
+            </p>
+        </div>
+
+        <!-- Sección Derecha (Carrusel de Imágenes) -->
+        <div class="signup-right">
+            <div class="slider">
+                <div class="slide" style="background-image: url('LOGIN IMAGEN 1.png');"></div>
+                <div class="slide" style="background-image: url('login imagen 2.png');"></div>
+                <div class="slide" style="background-image: url('imagen 3 login.png');"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility(fieldId) {
+            const passwordInput = document.getElementById(fieldId);
+            const eyeIcon = passwordInput.nextElementSibling.querySelector('img');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.src = 'eye-slash-icon.png'; // Cambia según tu diseño
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.src = 'ojo 2.png'; // Cambia según tu diseño
+            }
+        }
+    </script>
+</body>
+</html>

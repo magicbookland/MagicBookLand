@@ -1,0 +1,333 @@
+/* Colores principales */
+:root {
+    --primary-color: #861078; /* Morado */
+    --secondary-color: #f8f5f2; /* Beige */
+    --accent-color: #ab47bc; /* Degradado claro */
+    --button-hover-color: #b15cc9; /* Morado claro para hover */
+}
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('FONDO.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: #4A4A4A;
+    text-align: center; /* Centra el texto de toda la página */
+}
+
+/* Encabezado */
+.header {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 60px;
+}
+
+.header img.logo {
+    width: 80px;
+    object-fit: contain;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Selector de idioma */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+}
+
+.language-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.language-button.active {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
+}
+
+.language-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Botones con degradado */
+.login-link, .signup-link, .lang-rate-book {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Efecto hover en botones */
+.login-link:hover, .signup-link:hover, .lang-rate-book:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+/* Efecto animado en hover (brillo) */
+.login-link::before, .signup-link::before, .lang-rate-book::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+.login-link:hover::before, .signup-link:hover::before, .lang-rate-book:hover::before {
+    left: 0;
+}
+
+/* Sección Hero */
+.section-hero {
+    display: flex; /* Alinea texto e imágenes horizontalmente */
+    justify-content: flex-start; /* Espaciado entre texto e imágenes */
+    align-items: center; /* Alinea verticalmente */
+    padding: 40px 10%; /* Margen alrededor de la sección */
+    gap: 20px; /* Espacio entre texto e imágenes */
+}
+
+.hero-content {
+    flex: 1; /* Permite que el texto ocupe la mitad del espacio */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 18px; /* Reduce el tamaño del texto */
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea las imágenes a la derecha */
+    align-items: center;
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-right: -100px; /* Ajusta el margen derecho para acercar las imágenes */
+}
+
+.hero-image {
+    width: 500px; /* Aumenta el tamaño de la imagen */
+    height: auto;
+}
+
+/* Sección de características */
+.section-features {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.feature-card {
+    width: 250px;
+    height: 400px;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.feature-card:hover .feature-inner {
+    transform: rotateY(180deg);
+}
+
+.feature-front, .feature-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.feature-front img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature-back {
+    background-color: #f0f0f0;
+    color: #4A4A4A;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+/* Texto debajo de las tarjetas */
+.feature-card p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Nueva sección: Cómo funciona Magic Book */
+.section-how-it-works {
+    text-align: center;
+    padding: 40px 10%;
+    background-color: var(--secondary-color);
+}
+
+.section-how-it-works h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.how-it-works-steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+/* Sección de Descripción */
+.section-description h2, .section-description p {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.section-description {
+    padding: 40px 10%;
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.footer-content .social-icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.footer-content .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .section-hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-image-container {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 60%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        margin-bottom: 20px;
+    }
+
+    .how-it-works-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

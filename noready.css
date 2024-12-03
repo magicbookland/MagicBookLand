@@ -1,0 +1,102 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    box-sizing: border-box; /* Asegura que márgenes y bordes no afecten las dimensiones */
+}
+
+section {
+    display: flex;
+    flex: 1;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.containers {
+    display: flex;
+    flex: 1; /* Cada contenedor ocupa la mitad del ancho */
+    height: 100%; /* Altura completa */
+}
+
+/* Contenedor izquierdo */
+#conte_izquierda {
+    background-image: url(fondo.png); /* Verifica la ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+/* Barra superior del contenedor izquierdo */
+#barra_morada {
+    background-color: #861078;
+    width: 100%;
+    height: 30px;
+}
+
+/* Estilo de navegación */
+nav {
+    display: flex;
+    gap: 200px; /* Ajustado para ser más consistente */
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000; /* Color inicial negro */
+    font-size: 18px;
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+nav a:hover {
+    color: #505F06; /* Cambia a verde cuando pasa el mouse */
+}
+
+h5 {
+    color: #861078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; /* Reducido para ser más consistente */
+    text-align: center; /* Mejora visual del texto */
+}
+
+.div_imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen {
+    width: 300px;
+}
+
+/* Encabezado principal */
+h1 {
+    color: #861078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor derecho */
+#conte_derecha {
+    display: flex;
+    flex-direction: column;
+    background-color: #861078;
+}
+
+.div_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen_logo {
+    width: 600px;
+}
+
+#pc {
+    padding-left: 40px;
+}

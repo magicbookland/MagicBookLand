@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f2;
+    margin: 0;
+    overflow: hidden; /* Evita el desplazamiento vertical */
+}
+
+.signup-page {
+    display: flex;
+    height: 100vh; /* Asegura que el diseño ocupe toda la altura de la ventana */
+}
+
+/* Left Side (Form Section) */
+.signup-left {
+    flex: 1;
+    background-color: #f8f5f2;
+    background-image: url('FONDO.png'); /* Aplica el fondo que proporcionaste */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido hacia la parte superior */
+    align-items: center; /* Centra horizontalmente */
+    flex-direction: column;
+    padding: 0; /* Elimina el espacio innecesario */
+    padding-top: 10px; /* Ajusta el espacio superior del contenido */
+}
+
+.signup-left img {
+    width: 200px; /* Tamaño más grande para el logo */
+    height: auto;
+    margin-bottom: 0; /* Elimina el espacio debajo del logo */
+    cursor: pointer; /* Hace clickeable el logo */
+}
+
+.signup-left h2 {
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    color: #861078; /* Cambia el color morado */
+    margin-top: 0; /* Elimina el espacio superior */
+    margin-bottom: 0; /* Reduce el margen inferior */
+}
+
+.signup-left .description {
+    text-align: center;
+    font-size: 12px; /* Reduce ligeramente el texto */
+    color: #861078; /* Cambia el color morado */
+    margin-bottom: 5px; /* Reduce el espacio inferior */
+}
+
+.signup-left form {
+    width: 100%;
+    max-width: 320px; /* Reduce el ancho máximo */
+    background: white; /* Cambia el fondo del cuadro del formulario a blanco */
+    padding: 15px; /* Reduce el padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mantén la sombra */
+    margin-top: 0; /* Elimina el margen entre el logo y el formulario */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #861078; /* Cambia el color morado */
+    font-size: 14px; /* Ajusta tamaño del texto */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px; /* Reduce el padding */
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduce tamaño del texto */
+    box-sizing: border-box;
+    background-color: #F7ECE4; /* Cambia el fondo de los campos de entrada al color solicitado */
+}
+
+/* Password Field with Toggle Button */
+.password-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password img {
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+/* Buttons */
+.button {
+    background-color: #861078; /* Cambia el color morado */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reduce tamaño del texto */
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #750d6a; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+.button-google {
+    background-color: #861078; /* Cambia el color morado */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reduce tamaño del texto */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button-google:hover {
+    background-color: #750d6a; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+/* Text Links */
+.signup-text {
+    text-align: center;
+    margin-top: 10px; /* Espacio ajustado */
+    font-size: 14px;
+    color: #861078; /* Cambia el color morado */
+}
+
+.signup-text a {
+    color: #861078; /* Cambia el color morado */
+    text-decoration: underline;
+}
+
+/* Right Side (Slider Section) */
+.signup-right {
+    flex: 1;
+    background-color: #861078; /* Cambia el color del fondo morado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scrollEffect 12s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: contain; /* Mantener el tamaño proporcional */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Keyframes for Smooth Transition */
+@keyframes scrollEffect {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+/* Responsivo para dispositivos pequeños (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* General */
+    body {
+        overflow-y: auto; /* Permite desplazamiento en móviles */
+    }
+    
+    .signup-page, .login-page {
+        flex-direction: column; /* Cambia a diseño vertical */
+        height: auto; /* Ajusta la altura al contenido */
+    }
+
+    /* Left Side (Formulario) */
+    .signup-left, .login-left {
+        width: 100%;
+        flex: none;
+        padding: 20px;
+        background-size: cover; /* Mantén el fondo proporcional */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signup-left img, .login-left img {
+        width: 150px; /* Tamaño ajustado del logo */
+        margin-bottom: 15px;
+    }
+
+    .signup-left form, .login-left form {
+        width: 90%; /* Reduce el ancho del formulario */
+        max-width: 100%; /* Evita exceder los bordes */
+        padding: 15px;
+        box-shadow: none; /* Opcional: quita la sombra */
+    }
+
+    label {
+        font-size: 12px; /* Reduce el tamaño de texto */
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"] {
+        font-size: 14px;
+        padding: 8px; /* Reduce el padding */
+    }
+
+    .button, .button-google {
+        padding: 8px; /* Reduce tamaño de botones */
+        font-size: 14px;
+    }
+
+    .signup-left h2, .login-left h2 {
+        font-size: 18px; /* Tamaño del título */
+    }
+
+    /* Password Container */
+    .password-container {
+        margin-bottom: 10px;
+    }
+
+    /* Text Links */
+    .signup-text, .login-text {
+        font-size: 12px; /* Tamaño de texto reducido */
+        margin-top: 15px;
+    }
+
+    /* Right Side (Slider Section) */
+    .signup-right, .login-right {
+        display: none; /* Oculta el slider en móviles */
+    }
+}
+
+/* Muy pequeños (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    .signup-left img, .login-left img {
+        width: 120px; /* Aún más pequeño el logo */
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .button, .button-google {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .signup-left h2, .login-left h2 {
+        font-size: 16px;
+    }
+
+    .modal-content h2 {
+        font-size: 16px;
+    }
+
+    .modal-content p {
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,179 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Sección de cabecera */
+header {
+    background-color: #861078;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#avatar {
+    width: 60px;
+}
+
+#logo {
+    width: 100px;
+}
+
+#welcomeguess {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#textwelcome, #textguess {
+    color: white;
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+/* Contenedor principal de imágenes */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #861078;
+    border-radius: 10px;
+}
+
+.main-container img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.h3+_text{
+    display: flex;
+    margin: 50px;
+}
+
+/* Sección de lectura */
+.reading-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.books_reading {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.img-div img {
+    width: 80px;
+    height: auto;
+}
+
+.info-reading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.input_reading {
+    width: 50px;
+}
+
+.finished {
+    background-color: #861078;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Sección Next Read */
+.contein-next_read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.next-read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE9E099;
+    width: 95%;
+    height: 200px;
+    border-radius: 50px;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sección "Chosen for you" */
+.container_chosen {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_chosen {
+    background-color: #EEE9E099;
+    width: 1900px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: #861078;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}

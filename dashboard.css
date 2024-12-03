@@ -1,0 +1,509 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-image: url(fondo.png);
+}
+
+/* Cabecera */
+header {
+    background-color: #861078;
+}
+
+#avatar {
+    display: flex;
+    justify-content: right;
+    width: 60px;
+    height: auto;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+#welcomeguess {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clicks {
+    color: #e0e0e0;
+}
+
+.welcome {
+    background-color: #861078;
+    padding: 20px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#textwelcome, #textguess {
+    color: white;
+    margin: 0;
+}
+
+.div_avatar {
+    display: flex;
+    justify-content: right;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: #861078;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0e0e0; /* Color inicial */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+    color: green; /* Color al pasar el cursor */
+}
+
+#div_datos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+
+.h1_announcements{
+    color: #505F06;
+}
+
+/* Contenedor principal de imágenes */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #861078;
+    border-radius: 10px;
+}
+
+.main-container img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.h3_text {
+    display: flex;
+    margin: 50px;
+    padding-left: 110px;
+}
+
+/* Sección de lectura */
+.reading-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.books_reading {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-new_read{
+    color: #00000066;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.img-div img {
+    width: 80px;
+    height: auto;
+}
+
+.info-reading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+#next-read{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#next_read{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.input_reading {
+    width: 50px;
+}
+
+.finished {
+    background-color: #861078;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Sección Next Read */
+.contein-next_read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.next-read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE9E099;
+    width: 95%;
+    height: 200px;
+    border-radius: 50px;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+   h2 a {
+        text-decoration: none; /* Elimina el subrayado */
+        color: inherit; /* Usa el color del padre (<h2>) */
+
+    
+}
+
+
+/******* bloque2   **************/
+
+/* Contenedor principal */
+.contenedor_general {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+/* Estilo para los divs individuales */
+.div_mini {
+    width: 280px; /* Ancho inicial */
+    height: 130px; /* Alto inicial */
+    background-color: #f9f5f0; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #6a006a; /* Color del texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse */
+.div_mini:hover {
+    transform: scale(1.1); /* Escala el div al 110% */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+}
+
+/* Enlaces dentro de los divs individuales */
+.div_mini a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del elemento padre */
+    display: flex;
+    justify-content: center; /* Asegura que el enlace esté centrado */
+    align-items: center;
+    width: 100%; /* Ocupa todo el espacio del div */
+    height: 100%; /* Ocupa todo el espacio del div */
+}
+
+/* Estilo del texto dentro del enlace */
+.div_mini h2 {
+    margin: 0; /* Elimina márgenes por defecto del h2 */
+}
+
+/* Imagen clickeable */
+.div_mini img {
+    width: 40px; /* Tamaño ajustado para la imagen */
+    height: 40px;
+}
+
+
+
+
+
+/******************** bloque 3 *****************/
+
+.div_read{
+    width: 1200px; /* Ancho de los contenedores */
+    height: 180px; /* Alto de los contenedores */
+    background-color: #f9f5f0; /* Color de fondo similar a la referencia */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del div */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #6a006a; /* Color del texto */
+}
+
+
+#img_bloque3{
+    display: flex;
+    width: 100px;
+    height: auto;
+}
+
+
+
+
+/********* bloque 4 ***********/
+
+
+
+
+
+
+
+
+
+
+
+/************ bloque 5 ************/
+
+.contenedor_general {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.div_valued {
+    width: 1000px; /* Ancho inicial del div */
+    height: 350px; /* Alto inicial del div */
+    background-color: #E4BC7F54; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del div */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #6a006a; /* Color del texto */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para escala */
+}
+
+.div_valued:hover {
+    transform: scale(1.1); /* Escala el div al 110% al pasar el mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+#img_bloque5 {
+    display: flex;
+    width: 200px; /* Ancho inicial de la imagen */
+    height: 300px; /* Alto inicial de la imagen */
+    padding-left: 20px;
+    transition: transform 0.5s ease; /* Transición suave para la rotación */
+}
+
+.div_valued:hover #img_bloque5 {
+    transform: rotate(360deg); /* Rota la imagen 360 grados */
+}
+
+
+
+
+/***** bloque 6 **********/
+
+.div_chosen{
+    width: 1200px; /* Ancho de los contenedores */
+    height: 180px; /* Alto de los contenedores */
+    background-color: #EEE9E099; /* Color de fondo similar a la referencia */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del div */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #6a006a; /* Color del texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #861078;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100vh;
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 1024px) {
+    .main-container img {
+        width: 250px;
+    }
+
+    .books_reading {
+        width: 300px;
+        height: auto;
+    }
+
+    nav.barra {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #welcomeguess {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .barra {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-container img {
+        width: 200px;
+    }
+
+    .books_reading {
+        width: 100%;
+    }
+
+    .next-read {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container img {
+        width: 150px;
+    }
+
+    nav.barra {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .finished {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

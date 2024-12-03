@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Book</title>
+    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="hola.css">
+</head>
+<body>
+    <!-- Contenedor global para el encabezado -->
+    <div class="section-header">
+        <header class="header">
+            <img src="logo real.png" alt="Magic Book Logo" class="logo">
+            <nav>
+                <a href="#" class="lang-community" data-key="community">Community</a>
+                <a href="about.html" class="lang-about-us" data-key="aboutUs">About Us</a>
+                <a href="#" class="lang-search" data-key="search">Search</a>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-link lang-login" data-key="login">Log in</a>
+                <a href="signup.html" class="signup-link lang-signup" data-key="signup">Sign up</a>
+                <div class="language-switcher">
+                    <button id="lang-toggle" class="language-button active" data-lang="en">English</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Contenedor global para la sección hero -->
+    <div class="section-hero">
+        <div class="hero-content">
+            <h1 class="lang-welcome" data-key="welcome">Welcome to <br>Magic Book!</h1>
+            <p class="lang-safe-place" data-key="safePlace">The safe place for your readings</p>
+            <p class="lang-description" data-key="description">
+                Discover MagicBook: Your Ultimate Reading Companion. MagicBook is the app for book lovers who want to stay organized and inspired. Plan your reading time effortlessly with built-in calendars and reminders, and connect with a vibrant community of fellow readers. Dive into a smarter, more engaging way to enjoy your literary journey.
+            </p>
+            <a href="login.html" class="lang-rate-book" data-key="rateBook">Rate your book!</a>
+        </div>
+        <div class="hero-image-container">
+            <div class="image-wrapper">
+                <img src="pcycel.png" alt="Magic Book on devices" class="hero-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor global para la sección de características -->
+    <div class="section-features">
+        <section class="features">
+            <!-- Tarjeta 1 -->
+            <div class="feature-card">
+                <div class="feature-inner">
+                    <div class="feature-front">
+                        <img src="SETGOALSHD.png" alt="Set Goals">
+                    </div>
+                    <div class="feature-back lang-feature1" data-key="feature1">
+                        <p>Set personal goals to keep track of your reading achievements.</p>
+                    </div>
+                </div>
+                <p class="lang-set-goals" data-key="setGoals">Set Goals</p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="feature-card">
+                <div class="feature-inner">
+                    <div class="feature-front">
+                        <img src="login imagen 2.png" alt="Meet Other People">
+                    </div>
+                    <div class="feature-back lang-feature2" data-key="feature2">
+                        <p>Join a community of readers and share your experiences.</p>
+                    </div>
+                </div>
+                <p class="lang-meet-people" data-key="meetPeople">Meet Other People</p>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="feature-card">
+                <div class="feature-inner">
+                    <div class="feature-front">
+                        <img src="imagen 3 login.png" alt="Rate Your Reading">
+                    </div>
+                    <div class="feature-back lang-feature3" data-key="feature3">
+                        <p>Rate and review books you've read to help others find their next great read.</p>
+                    </div>
+                </div>
+                <p class="lang-rate-reading" data-key="rateReading">Rate Your Reading</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contenedor global para la sección de descripción -->
+    <div class="section-description">
+        <section class="description">
+            <h2>Discover, rate and share your favorite books.</h2>
+            <p>Welcome to our community of passionate readers. Here you can explore a wide collection of books, rate your favorite reads, add notes, and leave your reviews. What are you reading now? Share your thoughts and help others find their next great read!</p>
+            <p><strong>MagicBook: Where every reading is a unique experience.</strong></p>
+            <p><em>Rate, review, and organize the books you love.</em></p>
+        </section>
+    </div>
+
+    <!-- Nueva sección: Cómo funciona Magic Book -->
+    <div class="section-how-it-works">
+        <h2 class="lang-how-it-works" data-key="howItWorks">How Magic Book works</h2>
+        <div class="how-it-works-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <p class="lang-step1" data-key="step1">Read the books you like and rate them.</p>
+                <p><strong>500+ Books</strong></p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <p class="lang-step2" data-key="step2">Join groups that share your interests.</p>
+                <p><strong>97 Million People</strong></p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <p class="lang-step3" data-key="step3">Share your ideas and read others'.</p>
+                <p><strong>1000+ Ideas</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Terms and Conditions</p>
+            <div class="social-icons">
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            </div>
+            <p>Privacy Notice</p>
+        </div>
+    </footer>
+
+    <!-- Script para manejar el cambio de idioma -->
+    <script>
+        const translations = {
+            en: {
+                community: "Community",
+                aboutUs: "About Us",
+                search: "Search",
+                login: "Log in",
+                signup: "Sign up",
+                welcome: "Welcome to <br>Magic Book!",
+                safePlace: "The safe place for your readings",
+                description: "Discover MagicBook: Your Ultimate Reading Companion. MagicBook is the app for book lovers who want to stay organized and inspired. Plan your reading time effortlessly with built-in calendars and reminders, and connect with a vibrant community of fellow readers. Dive into a smarter, more engaging way to enjoy your literary journey.",
+                rateBook: "Rate your book!",
+                howItWorks: "How Magic Book works",
+                step1: "Read the books you like and rate them.",
+                step2: "Join groups that share your interests.",
+                step3: "Share your ideas and read others'."
+            },
+            es: {
+                community: "Comunidad",
+                aboutUs: "Sobre Nosotros",
+                search: "Buscar",
+                login: "Iniciar sesión",
+                signup: "Regístrate",
+                welcome: "Bienvenido a <br>Magic Book!",
+                safePlace: "El lugar seguro para tus lecturas",
+                description: "Descubre MagicBook: Tu Compañero de Lectura Definitivo. MagicBook es la app para amantes de los libros que desean estar organizados e inspirados. Planifica tu tiempo de lectura con calendarios integrados y recordatorios, y conéctate con una vibrante comunidad de lectores. Disfruta de una forma más inteligente y atractiva de vivir tu viaje literario.",
+                rateBook: "¡Califica tu libro!",
+                howItWorks: "Cómo funciona Magic Book",
+                step1: "Lee los libros que te gustan y califícalos.",
+                step2: "Únete a grupos que compartan tus intereses.",
+                step3: "Comparte tus ideas y lee las de otros."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll("[data-key]");
+            elements.forEach(element => {
+                const key = element.getAttribute("data-key");
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Cambiar clase activa
+            document.querySelectorAll(".language-button").forEach(button => {
+                button.classList.remove("active");
+            });
+            document.querySelector(`#lang-toggle`).classList.add("active");
+        }
+
+        // Inicializar idioma por defecto
+        changeLanguage("en");
+
+        document.getElementById("lang-toggle").addEventListener("click", () => {
+            const currentLang = document.getElementById("lang-toggle").getAttribute("data-lang");
+            const newLang = currentLang === "en" ? "es" : "en";
+            changeLanguage(newLang);
+            document.getElementById("lang-toggle").setAttribute("data-lang", newLang);
+            document.getElementById("lang-toggle").textContent = newLang === "en" ? "English" : "Español";
+        });
+    </script>
+</body>
+</html>

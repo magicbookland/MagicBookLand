@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;height: 100vh; /* Altura completa de la ventana */
+    background-image: url(fondo.png);
+    transition: background-color 0.4s, color 0.4s; /* Suaviza el cambio de color */
+    
+
+}
+
+
+/* Sección de cabecera */
+header {
+    background-color: #861078;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#avatar {
+    width: 60px;
+}
+
+#logo {
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+#logocenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomeguess {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#textwelcome, #textguess {
+    color: white;
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 10px;
+    background-image: url(fondonav.png);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.text_meet{
+    padding-left: 50px;
+}
+
+/* Estilo del modal (imagen ampliada) */
+.modal {
+    display: none; /* Está oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo nublado */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expanded-img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    border: 2px solid white;
+}
+
+/* Fondo nublado */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Nublar el fondo */
+}
+
+/* Estilo de la imagen de miniatura */
+.thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: solid  1px black;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.end_description{
+    justify-content: center;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+
+/* Estilo del footer */
+footer {
+    background-color: #861078;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Centrar los miembros dentro de section */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los miembros se acomoden en varias líneas si es necesario */
+    padding: 30px;
+}
+
+/* Estilo de los miembros */
+.members {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido */
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.members:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    color: #8A226F;
+    padding-left: 55px;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
+/* Descripción de la sección */
+#description {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    width: 190px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegura que los elementos absolutos dentro se alineen dentro de este contenedor */
+}
+
+/* Estilos para el tema oscuro */
+body.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.theme-toggle {
+    position: absolute; /* Se queda dentro del contenedor, pero puedes ajustarlo para que quede en una posición más apropiada */
+    bottom: 15px;
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+    display: flex;
+    align-items: center;
+    font-size: 12px; /* Puedes aumentar el tamaño de la fuente para que sea más legible */
+    font-family: "Molengo", sans-serif;
+}
+
+.theme-toggle span {
+    margin: 0 5px;
+}
+
+.theme-toggle .switch {
+    position: relative;
+    display: inline-block;
+    width: 42px; /* Ancho del interruptor */
+    height: 18px; /* Altura del interruptor */
+}
+
+.theme-toggle .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0); /* Color de fondo del interruptor */
+    border-radius: 34px; /* Bordes redondeados */
+    transition: background-color 0.4s;
+}
+
+.theme-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; /* Altura del círculo */
+    width: 14px; /* Ancho del círculo */
+    left: 2px; /* Espaciado desde la izquierda */
+    bottom: 2px; /* Espaciado desde la parte inferior */
+    background-color: white; /* Color del círculo */
+    border-radius: 50%; /* Hacer que el círculo sea redondo */
+    transition: transform 0.4s; /* Suaviza el movimiento del círculo */
+}
+
+.theme-toggle input:checked + .slider {
+    background-color: #2196f3; /* Color del interruptor cuando está activado */
+}
+
+.theme-toggle input:checked + .slider:before {
+    transform: translateX(14px); /* Mover el círculo a la derecha */
+}
